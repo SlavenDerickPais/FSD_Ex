@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com/?authuser=0"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css?authuser=0"> </script>
+    <title>E-Shop Explorer Web App </title>
+</head>
+<body>
+    <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+    
+      <nav class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+          <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">E-Shop Explorer</h1>
+          <ul class="hidden md:flex space-x-5">
+            <li><a href="#home" class="hover:text-blue-500 dark:hover:text-blue-300 hover:underline">Home</a></li>
+            <li><a href="#products" class="hover:text-blue-500 dark:hover:text-blue-300 hover:underline">Products</a></li>
+            <li><a href="#location" class="hover:text-blue-500 dark:hover:text-blue-300 hover:underline">Location</a></li>
+          </ul>
+          <button id="Login" class="px-3 py-1 bg-lime-800 dark:bg-lime-700 rounded text-sm dark:text-white">
+            Login
+          </button>
+        </div>
+      </nav>
+      <header id="home" class="bg-blue-100 dark:bg-blue-900 py-16 text-center">
+        <h2 class=" background-img: font-bold mb-3 text-blue-700 dark:text-blue-200">Welcome to E-Shop Explorer!</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300">Explore products, check your location, and enjoy our features!</p>
+      </header>
+        <video class="controls w-94 h-42 p-4 loop muted autoplay bg-gray-200 dark:bg-gray-700 rounded shadow-lg mx-auto mb-6" controls> 
+            <source src="Set1_Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        <track kind="captions" src="subtitles.vtt" srclang="en" label="English"></track>
+        </video>
+
+      <audio controls autoplay>
+        <source src="Set1_Audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <section id="products" class="max-w-4xl mx-auto px-4 py-10">  
+            <div id="productContainer" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"></div>
+            <section id="products" class="max-w-4xl mx-auto px-4 py-10">
+                <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
+                  <input id="searchInput" type="text" placeholder="Search products..." class="flex-1 border rounded px-3 py-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                  <select id="sortTitle" class="border rounded px-3 py-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <option value="az">A → Z</option>
+                    <option value="za">Z→ A</option>
+                  </select>
+                  <select id="sortPrice" class="border rounded px-3 py-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <option value="low">low → high</option>
+                    <option value="high">high→ low</option>
+                  </select>
+                </div>
+                <div id="productContainer" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"></div>
+              </section>
+            
+              <section id="location" class="bg-white dark:bg-gray-800 text-center py-10">
+                <h3 class="text-2xl font-semibold mb-2">Know Your Location!</h3>
+                 
+                <button id="getLocationBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                  Get My Location
+                </button>
+                <p id="locationDisplay" class="mt-4 text-gray-700 dark:text-gray-300"></p>
+              </section>
+            
+              <footer class="bg-gray-200 dark:bg-gray-800 text-center py-4 mt-10">
+                <p class="text-sm text-gray-600 dark:text-gray-300">©️ 2025 — Slaven,a student learning web dev </p>
+              </footer>
+  <div id="products" class="flex flex-wrap gap-6 justify-center px-4"></div>
+  <script src="script.js"></script>
+</body>
+</body>
+</html>
